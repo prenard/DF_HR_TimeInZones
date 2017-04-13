@@ -1,0 +1,55 @@
+<resources>
+	<properties>
+    	<property id="DF_Title" type="string">HR Time in Zones</property>
+	    <property id="Use_Garmin_Training_Zones" type="boolean">true</property>
+	    <property id="Z1_H" type="number">103</property>
+	    <property id="Z2_H" type="number">126</property>
+	    <property id="Z3_H" type="number">143</property>
+	    <property id="Z4_H" type="number">159</property>
+	    <property id="Z5_H" type="number">0</property>
+		<property id="Z6_H" type="number">0</property>
+		<property id="Display_Timer" type="number">2</property>
+	</properties>
+
+	<strings>
+    	<string id="DF_Title_Title">Data Field Title</string>
+    	<string id="Use_Garmin_Training_Zones_Title">Use Garmin Training Zones</string>
+	    <string id="Z1_H_Title">HR Zone 1 - High</string>
+	    <string id="Z2_H_Title">HR Zone 2 - High</string>
+		<string id="Z3_H_Title">HR Zone 3 - High</string>
+	    <string id="Z4_H_Title">HR Zone 4 - High</string>
+	    <string id="Z5_H_Title">HR Zone 5 - High</string>
+	    <string id="Z6_H_Title">HR Zone 6 - High</string>
+	    <string id="Display_Timer_Title">Display Timer</string>
+	</strings>
+	
+	<settings>
+	    <setting propertyKey="@Properties.DF_Title" title="@Strings.DF_Title_Title">
+	        <settingConfig type="alphaNumeric" readonly="true" />
+	    </setting>
+	    <setting propertyKey="@Properties.Use_Garmin_Training_Zones" title="@Strings.Use_Garmin_Training_Zones_Title">
+	        <settingConfig type="boolean"/>
+	    </setting>
+	    <setting propertyKey="@Properties.Z1_H" title="@Strings.Z1_H_Title">
+	        <settingConfig type="numeric" min="0" max="250" />
+	    </setting>
+	    <setting propertyKey="@Properties.Z2_H" title="@Strings.Z2_H_Title">
+	        <settingConfig type="numeric" min="0" max="250" />
+	    </setting>
+	    <setting propertyKey="@Properties.Z3_H" title="@Strings.Z3_H_Title">
+	        <settingConfig type="numeric" min="0" max="250" />
+	    </setting>
+	    <setting propertyKey="@Properties.Z4_H" title="@Strings.Z4_H_Title">
+	        <settingConfig type="numeric" min="0" max="250" />
+	    </setting>
+	    <setting propertyKey="@Properties.Z5_H" title="@Strings.Z5_H_Title">
+	        <settingConfig type="numeric" min="0" max="250" />
+	    </setting>
+	    <setting propertyKey="@Properties.Z6_H" title="@Strings.Z6_H_Title">
+	        <settingConfig type="numeric" min="0" max="250" />
+	    </setting>
+	    <setting propertyKey="@Properties.Display_Timer" title="@Strings.Display_Timer_Title">
+	        <settingConfig type="numeric" min="1" max="10" />
+	    </setting>
+	</settings>
+</resources>

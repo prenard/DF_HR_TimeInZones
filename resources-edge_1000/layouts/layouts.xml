@@ -1,0 +1,13 @@
+<layouts>
+    <!-- A generic, centered layout. -->
+    <layout id="MainLayout">
+		<drawable class="Background" />
+        <label id="DF_Title" x="1" y="1" justification="Gfx.TEXT_JUSTIFY_LEFT" font="Gfx.FONT_TINY"/>
+        <label id="HR_Value" x="85" y="30" justification="Gfx.TEXT_JUSTIFY_RIGHT" font="Gfx.FONT_NUMBER_MEDIUM"/>
+        <label id="HR_Unit" x="88" y="34" justification="Gfx.TEXT_JUSTIFY_LEFT" font="Gfx.FONT_XTINY"/>
+        <label id="HR_Zone" x="88" y="47"  justification="Gfx.TEXT_JUSTIFY_LEFT" font="Gfx.FONT_MEDIUM"/>
+        <label id="Z_Label" x="110" y="3" justification="Gfx.TEXT_JUSTIFY_LEFT" font="Gfx.FONT_MEDIUM"/>
+        <label id="Z_Value" x="237" y="5" justification="Gfx.TEXT_JUSTIFY_RIGHT" font="Gfx.FONT_LARGE"/>
+        <label id="Z_Range" x="237" y="45" justification="Gfx.TEXT_JUSTIFY_RIGHT" font="Gfx.FONT_LARGE"/>
+    </layout>
+</layouts>
