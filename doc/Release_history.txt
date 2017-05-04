@@ -1,0 +1,16 @@
+Modern training strategies are based on time spent in different Training Zones.
+
+With this Complex Data Field, you can check how much time you have spent in each HR Training Zones.
+
+You can customize this Data Field to use HR Training Zones stored in your Garmin device or specific hard coded Training Zones.
+
+Release History:
+
+- V1.03 - 2017-05-04
+* Fix bug with Garmin Express settings update
+- V1.02 - 2017-03-23
+* Garmin IQ - SDK 2.2.4
+- V1.01 - 2016-12-21
+* Garmin IQ - SDK 2.2.1
+- V1.00 - 2016-09-03
+* Original version

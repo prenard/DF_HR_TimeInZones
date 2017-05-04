@@ -169,7 +169,7 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 	   }
 
 		//System.println(App_Title);
-   	    DF_Title.setText(App_Title);
+   	    DF_Title.setText("HR Zones");
         return true;
     }
 
