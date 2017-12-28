@@ -6,6 +6,9 @@ You can customize this Data Field to use HR Training Zones stored in your Garmin
 
 Release History:
 
+- V1.04 - 2017-12-28
+* Garmin IQ - SDK 2.4.1
+* Edge 1030 support
 - V1.03 - 2017-05-04
 * Fix bug with Garmin Express settings update
 - V1.02 - 2017-03-23
