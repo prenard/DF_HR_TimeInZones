@@ -1,5 +1,10 @@
 // History:
 //
+// 2018-01-19: Version 1.05
+//
+//		* CIQ 2.42
+//		* Fix 1030 display
+//
 // 2017-12-28: Version 1.04
 //
 //		* CIQ 2.41 to support Edge 1030
