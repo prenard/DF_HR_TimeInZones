@@ -183,19 +183,19 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 				Graph_Bottom_y = 49;
 
 				DF_Title_x = 1;
-				DF_Title_y = 1;
+				DF_Title_y = 6;
 				DF_Title_font = Gfx.FONT_XTINY;
 
 				HR_Value_x = 85;
-				HR_Value_y = 15;
+				HR_Value_y = 30;
 				HR_Value_font = Gfx.FONT_LARGE;
 
-				HR_Zone_x = 20;
-				HR_Zone_y = 17;
+				HR_Zone_x = 1;
+				HR_Zone_y = 20;
 				HR_Zone_font = Gfx.FONT_SMALL;
 
-				HR_Unit_x = 1;
-				HR_Unit_y = 10;
+				HR_Unit_x = 90;
+				HR_Unit_y = 25;
 				HR_Unit_font = Gfx.FONT_XTINY;
 
 				Z_Label_x = 97;
@@ -203,14 +203,15 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 				Z_Label_font = Gfx.FONT_SMALL;
 
 				Z_Value_x = 197;
-				Z_Value_y = 10;
+				Z_Value_y = 13;
 				Z_Value_font = Gfx.FONT_MEDIUM;
 
 				Z_Range_x = 197;
-				Z_Range_y = 30;
+				Z_Range_y = 33;
 				Z_Range_font = Gfx.FONT_MEDIUM;
 
 				break;
+
 			case "edge_820":
 
 				Graph_Right_x = 195;
@@ -245,6 +246,78 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 				Z_Range_font = Gfx.FONT_MEDIUM;
 
 				break;
+
+			case "edge_1000":
+
+				Graph_Right_x = 230;
+				Graph_Bottom_y = 75;
+
+				DF_Title_x = 1;
+				DF_Title_y = 6;
+				DF_Title_font = Gfx.FONT_XTINY;
+
+				HR_Value_x = 85;
+				HR_Value_y = 30;
+				HR_Value_font = Gfx.FONT_LARGE;
+
+				HR_Zone_x = 1;
+				HR_Zone_y = 20;
+				HR_Zone_font = Gfx.FONT_SMALL;
+
+				HR_Unit_x = 90;
+				HR_Unit_y = 25;
+				HR_Unit_font = Gfx.FONT_XTINY;
+
+				Z_Label_x = 97;
+				Z_Label_y = 10;
+				Z_Label_font = Gfx.FONT_SMALL;
+
+				Z_Value_x = 237;
+				Z_Value_y = 15;
+				Z_Value_font = Gfx.FONT_LARGE;
+
+				Z_Range_x = 237;
+				Z_Range_y = 45;
+				Z_Range_font = Gfx.FONT_LARGE;
+
+				break;
+
+			case "edge_1030":
+
+				Graph_Right_x = 270;
+				Graph_Bottom_y = 90;
+
+				DF_Title_x = 1;
+				DF_Title_y = 6;
+				DF_Title_font = Gfx.FONT_XTINY;
+
+				HR_Value_x = 85;
+				HR_Value_y = 30;
+				HR_Value_font = Gfx.FONT_LARGE;
+
+				HR_Zone_x = 1;
+				HR_Zone_y = 20;
+				HR_Zone_font = Gfx.FONT_SMALL;
+
+				HR_Unit_x = 90;
+				HR_Unit_y = 25;
+				HR_Unit_font = Gfx.FONT_XTINY;
+
+				Z_Label_x = 97;
+				Z_Label_y = 10;
+				Z_Label_font = Gfx.FONT_SMALL;
+
+				Z_Value_x = 279;
+				Z_Value_y = 15;
+				Z_Value_font = Gfx.FONT_LARGE;
+
+				Z_Range_x = 279;
+				Z_Range_y = 45;
+				Z_Range_font = Gfx.FONT_LARGE;
+
+				break;
+
+
 			default:
 				break;
 		}
