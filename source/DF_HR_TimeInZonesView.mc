@@ -19,7 +19,6 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 
 	var Max_Display_Timer = 10;
 	var Display_Timer = 0;
-	var Graph_Timer = 0;
 	
     var Loop_Index;
     var Loop_Size;
@@ -44,6 +43,8 @@ class DF_HR_TimeInZonesView extends Ui.DataField
     var Z_Range;
 
 	// Graph Management
+
+	var Graph_Timer = 0;
 
 	var arrayColours = new [5];
 
@@ -130,8 +131,6 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 		}
 		else
 		{
-			var Last_Zone = false;
-
 			Zone_L[0] = 0;
 			for (var i = 0; i < Z_H.size() ; ++i)
     	   	{
@@ -163,7 +162,7 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 		for (var i = 0; i <= Zones_Number ; ++i)
        	{
 			Zone_Time[i] = 0;
-			var j = i+1;
+			var j = i + 1;
 			System.println("Zone " + j + " : " + Zone_L[i] + " - " + Zone_H[i]);
 			for (var k = 0; k < Display_Timer; ++k)
     	   	{
@@ -386,10 +385,15 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 			HR_Current_Zone = HR_Zone + 1;
 		}
 
-		if (HR_Current != null && info.elapsedTime != null && info.elapsedTime > 0)
+		if (info.currentHeartRate != null && info.elapsedTime != null && info.elapsedTime > 0)
 		{
+			// Compute time in Zones
+			System.println("HR_Zone = " + HR_Zone);
+			Zone_Time[HR_Zone]++;
 
-			aveHRValue = aveHRValue + HR_Current;
+
+
+			aveHRValue = aveHRValue + info.currentHeartRate;
 			aveHRCount = aveHRCount + 1;
 			
 			if(aveHRCount > Graph_Timer)
@@ -436,10 +440,6 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 			//if(HRmin < Zone_L[1] + 10) { HRmin = Zone_L[1] + 10; }  // set floor just above min HR
 			HRmax = HRmax + 5;
 			//if(HRmax > Zone_H[4] + 5) { HRmax = Zone_H[4] + 5; }  // clip spikes just above max HR
-
-			// Compute time in Zones
-			System.println("HR_Zone = " + HR_Zone);
-			Zone_Time[HR_Zone]++;
 		
         }
 		//System.println("HR_Current_Zone = " + HR_Zone);
