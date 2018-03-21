@@ -8,6 +8,7 @@
 	    <property id="Z4_H" type="number">159</property>
 		<property id="Display_Timer" type="number">2</property>
 		<property id="Graph_Timer" type="number">4</property>
+	    <property id="Display_Graph" type="boolean">false</property>
 	</properties>
 
 	<strings>
@@ -19,6 +20,7 @@
 	    <string id="Z4_H_Title">HR Zone 4 - High</string>
 	    <string id="Display_Timer_Title">Display Timer</string>
 	    <string id="Graph_Timer_Title">Graph Timer</string>
+	    <string id="Display_Graph_Title">Display Graph</string>
 	</strings>
 	
 	<settings>
@@ -45,6 +47,9 @@
 	    </setting>
 	    <setting propertyKey="@Properties.Graph_Timer" title="@Strings.Graph_Timer_Title">
 	        <settingConfig type="numeric" min="1" max="60" />
+	    </setting>
+	    <setting propertyKey="@Properties.Display_Graph" title="@Strings.Display_Graph_Title">
+	        <settingConfig type="boolean"/>
 	    </setting>
 	</settings>
 </resources>

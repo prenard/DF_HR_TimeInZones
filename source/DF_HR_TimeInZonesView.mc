@@ -44,9 +44,11 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 
 	// Graph Management
 
+	var Display_Graph = false;
+
 	var Graph_Timer = 0;
 
-	var arrayColours = new [5];
+    var arrayColours = [Gfx.COLOR_LT_GRAY, Gfx.COLOR_BLUE, Gfx.COLOR_GREEN, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED];
 
 	var arrayHRSize = 0;
     var arrayHRValue = new [0];
@@ -57,7 +59,6 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 
 	var HRmin = 0;
 	var HRmax = 0;
-	var HRmid;
 
 	var DF_Title_x = 0;
 	var DF_Title_y = 0;
@@ -107,7 +108,8 @@ class DF_HR_TimeInZonesView extends Ui.DataField
         App_Title	 	= Args[5];
 		Use_Garmin_Training_Zones = Args[6];
 		Graph_Timer 	= Args[7];
-
+		Display_Graph	= Args[8];
+		
 		if (Use_Garmin_Training_Zones)
 		{
 			var Sport = UserProfile.getCurrentSport();
@@ -220,28 +222,28 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 				DF_Title_y = 6;
 				DF_Title_font = Gfx.FONT_XTINY;
 
-				HR_Value_x = 85;
-				HR_Value_y = 30;
-				HR_Value_font = Gfx.FONT_LARGE;
+				HR_Value_x = 80;
+				HR_Value_y = 35;
+				HR_Value_font = Gfx.FONT_NUMBER_HOT;
 
-				HR_Zone_x = 1;
-				HR_Zone_y = 20;
+				HR_Zone_x = 85;
+				HR_Zone_y = 30;
 				HR_Zone_font = Gfx.FONT_SMALL;
 
-				HR_Unit_x = 90;
-				HR_Unit_y = 25;
+				HR_Unit_x = 85;
+				HR_Unit_y = 44;
 				HR_Unit_font = Gfx.FONT_XTINY;
 
-				Z_Label_x = 97;
+				Z_Label_x = 85;
 				Z_Label_y = 10;
-				Z_Label_font = Gfx.FONT_SMALL;
+				Z_Label_font = Gfx.FONT_MEDIUM;
 
 				Z_Value_x = 197;
-				Z_Value_y = 13;
-				Z_Value_font = Gfx.FONT_MEDIUM;
+				Z_Value_y = 18;
+				Z_Value_font = Gfx.FONT_NUMBER_MILD;
 
 				Z_Range_x = 197;
-				Z_Range_y = 33;
+				Z_Range_y = 42;
 				Z_Range_font = Gfx.FONT_MEDIUM;
 
 				break;
@@ -290,29 +292,29 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 				DF_Title_y = 6;
 				DF_Title_font = Gfx.FONT_XTINY;
 
-				HR_Value_x = 85;
-				HR_Value_y = 30;
-				HR_Value_font = Gfx.FONT_LARGE;
+				HR_Value_x = 125;
+				HR_Value_y = 55;
+				HR_Value_font = Gfx.FONT_NUMBER_THAI_HOT;
 
-				HR_Zone_x = 1;
-				HR_Zone_y = 20;
+				HR_Zone_x = 130;
+				HR_Zone_y = 50;
 				HR_Zone_font = Gfx.FONT_SMALL;
 
-				HR_Unit_x = 90;
-				HR_Unit_y = 25;
+				HR_Unit_x = 130;
+				HR_Unit_y = 68;
 				HR_Unit_font = Gfx.FONT_XTINY;
 
-				Z_Label_x = 97;
-				Z_Label_y = 10;
-				Z_Label_font = Gfx.FONT_SMALL;
+				Z_Label_x = 160;
+				Z_Label_y = 55;
+				Z_Label_font = Gfx.FONT_MEDIUM;
 
-				Z_Value_x = 279;
-				Z_Value_y = 15;
-				Z_Value_font = Gfx.FONT_LARGE;
+				Z_Value_x = 280;
+				Z_Value_y = 20;
+				Z_Value_font = Gfx.FONT_NUMBER_MEDIUM;
 
-				Z_Range_x = 279;
-				Z_Range_y = 45;
-				Z_Range_font = Gfx.FONT_LARGE;
+				Z_Range_x = 280;
+				Z_Range_y = 55;
+				Z_Range_font = Gfx.FONT_MEDIUM;
 
 				break;
 
@@ -340,8 +342,7 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 		
 		
         curPos = 0;
-        arrayColours = [Gfx.COLOR_LT_GRAY, Gfx.COLOR_BLUE, Gfx.COLOR_DK_GREEN, Gfx.COLOR_ORANGE, Gfx.COLOR_DK_RED];
-		HRmid = ( Zone_L[1] + (Zone_H[Zones_Number]-Zone_L[1])*0.5 ).toNumber();
+
         for (var i = 0; i < arrayHRValue.size(); ++i)
         {
             arrayHRValue[i] = 0;
@@ -475,31 +476,31 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 
 		var Value_to_Display = TimeFormat(Zone_Time[Zone_to_Display]);
         
-		var Range_to_Display = Zone_L[Zone_to_Display].toString() + " - " + Zone_H[Zone_to_Display].toString();
+		var Range_to_Display = Zone_L[Zone_to_Display].toString() + ":" + Zone_H[Zone_to_Display].toString();
 		
         // Call parent's onUpdate(dc) to redraw the layout
         View.onUpdate(dc);
 
-        for (var i = 0; i < arrayHRValue.size(); ++i)
-        {
-			//System.println("Graph: " + i);
-			var ii;
-			var scaling;
-
-        	ii = curPos-1-i;
-        	if(ii < 0)
-        	{
-        		ii = ii + arrayHRValue.size();
-        	}
-
-        	if(arrayHRZone[ii] >=0)
-        	{
-				scaling = (arrayHRValue[ii] - HRmin).toFloat() / (HRmax - HRmin).toFloat();
-				dc.setColor(arrayColours[arrayHRZone[ii]], Gfx.COLOR_TRANSPARENT);
-        		dc.drawLine(Graph_Right_x - i, Graph_Bottom_y, Graph_Right_x - i, (Graph_Bottom_y - Graph_Bottom_y * scaling).toNumber());
-        	}
-        }
-
+		if (Display_Graph)
+		{
+	        for (var i = 0; i < arrayHRValue.size(); ++i)
+    	    {
+				//System.println("Graph: " + i);
+				var ii;
+				var scaling;
+	        	ii = curPos-1-i;
+    	    	if(ii < 0)
+	        	{
+    	    		ii = ii + arrayHRValue.size();
+	        	}
+	        	if(arrayHRZone[ii] >=0)
+    	    	{
+					scaling = (arrayHRValue[ii] - HRmin).toFloat() / (HRmax - HRmin).toFloat();
+					dc.setColor(arrayColours[arrayHRZone[ii]], Gfx.COLOR_TRANSPARENT);
+        			dc.drawLine(Graph_Right_x - i, Graph_Bottom_y, Graph_Right_x - i, (Graph_Bottom_y - Graph_Bottom_y * scaling).toNumber());
+        		}
+	        }
+		}
 
 		//HR_Current_Zone = GetHRZone(HR_Current);
 		//System.println("HR_Current: " + HR_Current);

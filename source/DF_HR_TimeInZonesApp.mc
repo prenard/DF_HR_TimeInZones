@@ -1,5 +1,5 @@
 // 
-// Prod id =
+// Prod id = 5822EE3C9E76458CB432F4264F412596
 // Dev id  = 906b14cd7e8e42d0b40b066335721498
 //
 // History:
@@ -43,7 +43,7 @@ class DF_HR_TimeInZonesApp extends App.AppBase
     //! Return the initial view of your application here
     function getInitialView()
     {
-		var Args = new [8];
+		var Args = new [9];
 
 		Args[0]	= readPropertyKeyInt("Z1_H",100);
 		Args[1]	= readPropertyKeyInt("Z2_H",120);
@@ -53,7 +53,8 @@ class DF_HR_TimeInZonesApp extends App.AppBase
 		Args[5] = getProperty("DF_Title");
 		Args[6] = getProperty("Use_Garmin_Training_Zones");
 		Args[7] = readPropertyKeyInt("Graph_Timer",4);
-			
+		Args[8] = getProperty("Display_Graph");
+		
         return [ new DF_HR_TimeInZonesView(Args) ];
 
     }
