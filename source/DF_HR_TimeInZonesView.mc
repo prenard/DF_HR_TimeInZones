@@ -219,31 +219,37 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 				Graph_Bottom_y = 49;
 
 				DF_Title_x = 1;
-				DF_Title_y = 6;
+				DF_Title_y = 1;
 				DF_Title_font = Gfx.FONT_XTINY;
 
 				HR_Value_x = 80;
-				HR_Value_y = 35;
+				HR_Value_y = 10;
 				HR_Value_font = Gfx.FONT_NUMBER_HOT;
 
+				//HR_Zone_x = 85;
+				//HR_Zone_y = 20;
+				//HR_Zone_font = Gfx.FONT_SMALL;
 				HR_Zone_x = 85;
-				HR_Zone_y = 30;
-				HR_Zone_font = Gfx.FONT_SMALL;
+				HR_Zone_y = 1;
+				HR_Zone_font =  Gfx.FONT_MEDIUM;
 
 				HR_Unit_x = 85;
-				HR_Unit_y = 44;
+				HR_Unit_y = 38;
 				HR_Unit_font = Gfx.FONT_XTINY;
 
-				Z_Label_x = 85;
-				Z_Label_y = 10;
-				Z_Label_font = Gfx.FONT_MEDIUM;
+				//Z_Label_x = 85;
+				//Z_Label_y = 1;
+				//Z_Label_font = Gfx.FONT_MEDIUM;
+				Z_Label_x = 105;
+				Z_Label_y = 24;
+				Z_Label_font = Gfx.FONT_NUMBER_MILD;
 
 				Z_Value_x = 197;
-				Z_Value_y = 18;
+				Z_Value_y = 0;
 				Z_Value_font = Gfx.FONT_NUMBER_MILD;
 
 				Z_Range_x = 197;
-				Z_Range_y = 42;
+				Z_Range_y = 30;
 				Z_Range_font = Gfx.FONT_MEDIUM;
 
 				break;
@@ -254,30 +260,30 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 				Graph_Bottom_y = 75;
 
 				DF_Title_x = 1;
-				DF_Title_y = 6;
+				DF_Title_y = 1;
 				DF_Title_font = Gfx.FONT_XTINY;
 
-				HR_Value_x = 85;
-				HR_Value_y = 30;
-				HR_Value_font = Gfx.FONT_LARGE;
+				HR_Value_x = 115;
+				HR_Value_y = 20;
+				HR_Value_font = Gfx.FONT_NUMBER_THAI_HOT;
 
-				HR_Zone_x = 1;
-				HR_Zone_y = 20;
-				HR_Zone_font = Gfx.FONT_SMALL;
+				HR_Zone_x = 118;
+				HR_Zone_y = 1;
+				HR_Zone_font = Gfx.FONT_MEDIUM;
 
-				HR_Unit_x = 90;
-				HR_Unit_y = 25;
+				HR_Unit_x = 118;
+				HR_Unit_y = 62;
 				HR_Unit_font = Gfx.FONT_XTINY;
 
-				Z_Label_x = 97;
-				Z_Label_y = 10;
-				Z_Label_font = Gfx.FONT_SMALL;
+				Z_Label_x = 118;
+				Z_Label_y = 30;
+				Z_Label_font = Gfx.FONT_NUMBER_MILD;
 
-				Z_Value_x = 237;
-				Z_Value_y = 15;
-				Z_Value_font = Gfx.FONT_LARGE;
+				Z_Value_x = 238;
+				Z_Value_y = 1;
+				Z_Value_font = Gfx.FONT_NUMBER_MILD;
 
-				Z_Range_x = 237;
+				Z_Range_x = 238;
 				Z_Range_y = 45;
 				Z_Range_font = Gfx.FONT_LARGE;
 
@@ -289,32 +295,32 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 				Graph_Bottom_y = 90;
 
 				DF_Title_x = 1;
-				DF_Title_y = 6;
+				DF_Title_y = 1;
 				DF_Title_font = Gfx.FONT_XTINY;
 
 				HR_Value_x = 125;
-				HR_Value_y = 55;
+				HR_Value_y = 20;
 				HR_Value_font = Gfx.FONT_NUMBER_THAI_HOT;
 
 				HR_Zone_x = 130;
-				HR_Zone_y = 50;
-				HR_Zone_font = Gfx.FONT_SMALL;
+				HR_Zone_y = 1;
+				HR_Zone_font = Gfx.FONT_MEDIUM;
 
 				HR_Unit_x = 130;
-				HR_Unit_y = 68;
+				HR_Unit_y = 75;
 				HR_Unit_font = Gfx.FONT_XTINY;
 
-				Z_Label_x = 160;
-				Z_Label_y = 55;
-				Z_Label_font = Gfx.FONT_MEDIUM;
+				Z_Label_x = 130;
+				Z_Label_y = 40;
+				Z_Label_font = Gfx.FONT_NUMBER_MEDIUM;
 
 				Z_Value_x = 280;
-				Z_Value_y = 20;
+				Z_Value_y = 1;
 				Z_Value_font = Gfx.FONT_NUMBER_MEDIUM;
 
 				Z_Range_x = 280;
 				Z_Range_y = 55;
-				Z_Range_font = Gfx.FONT_MEDIUM;
+				Z_Range_font = Gfx.FONT_LARGE;
 
 				break;
 
@@ -534,7 +540,8 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 		if (s != null)
 		{
 			dc.setColor(color, Gfx.COLOR_TRANSPARENT);
-			dc.drawText(x, y, font, s, Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER);
+			//dc.drawText(x, y, font, s, Graphics.TEXT_JUSTIFY_RIGHT|Graphics.TEXT_JUSTIFY_VCENTER);
+			dc.drawText(x, y, font, s, Graphics.TEXT_JUSTIFY_RIGHT);
 		}
 	}
 
@@ -543,7 +550,8 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 		if (s != null)
 		{
 			dc.setColor(color, Gfx.COLOR_TRANSPARENT);
-			dc.drawText(x, y, font, s, Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER);
+			//dc.drawText(x, y, font, s, Graphics.TEXT_JUSTIFY_LEFT|Graphics.TEXT_JUSTIFY_VCENTER);
+			dc.drawText(x, y, font, s, Graphics.TEXT_JUSTIFY_LEFT);
 		}
 	}
 
