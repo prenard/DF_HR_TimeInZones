@@ -5,7 +5,9 @@ With this Complex Data Field, you can check how much time you have spent in each
 You can customize this Data Field to use HR Training Zones stored in your Garmin device or specific hard coded Training Zones.
 
 Release History:
-
+- V1.12 - 2018-04-30
+* Update Display
+* Edge 520 Plus support
 - V1.10 - 2018-03-22
 * Garmin IQ - SDK 2.4.4
 * Add option to display Graph

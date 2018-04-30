@@ -109,7 +109,13 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 		Use_Garmin_Training_Zones = Args[6];
 		Graph_Timer 	= Args[7];
 		Display_Graph	= Args[8];
-		
+
+		// Memory limitation on Edge 520 = no graph support
+		if (Device_Type.equals("edge_520"))
+		{
+			Display_Graph = false;
+		}
+
 		if (Use_Garmin_Training_Zones)
 		{
 			var Sport = UserProfile.getCurrentSport();
@@ -180,35 +186,35 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 		{
 			case "edge_520":
 
-				Graph_Right_x = 100;
+				Graph_Right_x = 195;
 				Graph_Bottom_y = 49;
 
 				DF_Title_x = 1;
-				DF_Title_y = 6;
+				DF_Title_y = 1;
 				DF_Title_font = Gfx.FONT_XTINY;
 
 				HR_Value_x = 85;
-				HR_Value_y = 30;
-				HR_Value_font = Gfx.FONT_LARGE;
+				HR_Value_y = 10;
+				HR_Value_font = Gfx.FONT_NUMBER_HOT;
 
-				HR_Zone_x = 1;
-				HR_Zone_y = 20;
-				HR_Zone_font = Gfx.FONT_SMALL;
+				HR_Zone_x = 85;
+				HR_Zone_y = 1;
+				HR_Zone_font =  Gfx.FONT_MEDIUM;
 
-				HR_Unit_x = 90;
-				HR_Unit_y = 25;
+				HR_Unit_x = 85;
+				HR_Unit_y = 38;
 				HR_Unit_font = Gfx.FONT_XTINY;
 
-				Z_Label_x = 97;
-				Z_Label_y = 10;
-				Z_Label_font = Gfx.FONT_SMALL;
+				Z_Label_x = 105;
+				Z_Label_y = 24;
+				Z_Label_font = Gfx.FONT_NUMBER_MILD;
 
 				Z_Value_x = 197;
-				Z_Value_y = 13;
-				Z_Value_font = Gfx.FONT_MEDIUM;
+				Z_Value_y = 0;
+				Z_Value_font = Gfx.FONT_NUMBER_MILD;
 
 				Z_Range_x = 197;
-				Z_Range_y = 33;
+				Z_Range_y = 30;
 				Z_Range_font = Gfx.FONT_MEDIUM;
 
 				break;
@@ -226,9 +232,6 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 				HR_Value_y = 10;
 				HR_Value_font = Gfx.FONT_NUMBER_HOT;
 
-				//HR_Zone_x = 85;
-				//HR_Zone_y = 20;
-				//HR_Zone_font = Gfx.FONT_SMALL;
 				HR_Zone_x = 85;
 				HR_Zone_y = 1;
 				HR_Zone_font =  Gfx.FONT_MEDIUM;
@@ -237,9 +240,6 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 				HR_Unit_y = 38;
 				HR_Unit_font = Gfx.FONT_XTINY;
 
-				//Z_Label_x = 85;
-				//Z_Label_y = 1;
-				//Z_Label_font = Gfx.FONT_MEDIUM;
 				Z_Label_x = 105;
 				Z_Label_y = 24;
 				Z_Label_font = Gfx.FONT_NUMBER_MILD;
@@ -334,11 +334,15 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 
 		System.println("Before Array Allocation - Total Memory = " + System.getSystemStats().totalMemory + " / Used Memory = " + System.getSystemStats().usedMemory);
 
-		for (var i = 0; i < arrayHRSize; ++i)
+		// Test to manage Edge 520 memory limitation
+		if (Display_Graph)
 		{
-			arrayHRValue.add(["0"]);
-			arrayHRZone.add(["0"]);
-			//System.println("During Array Allocation - Total Memory = " + System.getSystemStats().totalMemory + " / Used Memory = " + System.getSystemStats().usedMemory);
+			for (var i = 0; i < arrayHRSize; ++i)
+			{
+				arrayHRValue.add(["0"]);
+				arrayHRZone.add(["0"]);
+				//System.println("During Array Allocation - Total Memory = " + System.getSystemStats().totalMemory + " / Used Memory = " + System.getSystemStats().usedMemory);
+			}
 		}
 
 
@@ -403,7 +407,8 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 			aveHRValue = aveHRValue + info.currentHeartRate;
 			aveHRCount = aveHRCount + 1;
 			
-			if(aveHRCount > Graph_Timer)
+			// Test to manage Edge 520 memory limitation			
+			if(Display_Graph and aveHRCount > Graph_Timer)
 			{
 				arrayHRValue[curPos] = (aveHRValue / aveHRCount).toNumber();
 				arrayHRZone[curPos] = GetHRZone(arrayHRValue[curPos]);
