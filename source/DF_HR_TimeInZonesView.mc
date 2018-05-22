@@ -219,6 +219,42 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 
 				break;
 
+			case "edge_520_plus":
+
+				Graph_Right_x = 195;
+				Graph_Bottom_y = 49;
+
+				DF_Title_x = 1;
+				DF_Title_y = 1;
+				DF_Title_font = Gfx.FONT_XTINY;
+
+				HR_Value_x = 85;
+				HR_Value_y = 10;
+				HR_Value_font = Gfx.FONT_NUMBER_HOT;
+
+				HR_Zone_x = 85;
+				HR_Zone_y = 1;
+				HR_Zone_font =  Gfx.FONT_MEDIUM;
+
+				HR_Unit_x = 85;
+				HR_Unit_y = 38;
+				HR_Unit_font = Gfx.FONT_XTINY;
+
+				Z_Label_x = 105;
+				Z_Label_y = 24;
+				Z_Label_font = Gfx.FONT_NUMBER_MILD;
+
+				Z_Value_x = 197;
+				Z_Value_y = 0;
+				Z_Value_font = Gfx.FONT_NUMBER_MILD;
+
+				Z_Range_x = 197;
+				Z_Range_y = 30;
+				Z_Range_font = Gfx.FONT_MEDIUM;
+
+				break;
+
+
 			case "edge_820":
 
 				Graph_Right_x = 195;
@@ -232,12 +268,12 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 				HR_Value_y = 10;
 				HR_Value_font = Gfx.FONT_NUMBER_HOT;
 
-				HR_Zone_x = 85;
+				HR_Zone_x = 82;
 				HR_Zone_y = 1;
 				HR_Zone_font =  Gfx.FONT_MEDIUM;
 
-				HR_Unit_x = 50;
-				HR_Unit_y = 1;
+				HR_Unit_x = 85;
+				HR_Unit_y = 38;
 				HR_Unit_font = Gfx.FONT_XTINY;
 
 				Z_Label_x = 105;
@@ -302,17 +338,17 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 				HR_Value_y = 20;
 				HR_Value_font = Gfx.FONT_NUMBER_THAI_HOT;
 
-				HR_Zone_x = 130;
-				HR_Zone_y = 1;
-				HR_Zone_font = Gfx.FONT_MEDIUM;
+				HR_Zone_x = 140;
+				HR_Zone_y = 40;
+				HR_Zone_font = Gfx.FONT_LARGE;
 
 				HR_Unit_x = 80;
 				HR_Unit_y = 1;
 				HR_Unit_font = Gfx.FONT_XTINY;
 
-				Z_Label_x = 135;
+				Z_Label_x = 170;
 				Z_Label_y = 40;
-				Z_Label_font = Gfx.FONT_LARGE;
+				Z_Label_font = Gfx.FONT_NUMBER_MEDIUM;
 
 				Z_Value_x = 280;
 				Z_Value_y = 1;
@@ -373,13 +409,14 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 
      
        //if (Device_Type.equals("edge_520") or Device_Type.equals("edge_1000"))
+/*
        if (Device_Type.equals("edge_520") or Device_Type.equals("edge_820"))
        {
 			CustomFont_Value_Medium_1 = Ui.loadResource(Rez.Fonts.Font_Value_Medium_1);
 			CustomFont_Value_Medium_2 = Ui.loadResource(Rez.Fonts.Font_Value_Medium_2);
 			CustomFont_Value_Large_1 = Ui.loadResource(Rez.Fonts.Font_Value_Large_1);
 	   }
-
+*/
         return true;
     }
 
