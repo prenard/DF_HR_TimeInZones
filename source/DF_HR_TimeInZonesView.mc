@@ -236,8 +236,8 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 				HR_Zone_y = 1;
 				HR_Zone_font =  Gfx.FONT_MEDIUM;
 
-				HR_Unit_x = 85;
-				HR_Unit_y = 38;
+				HR_Unit_x = 50;
+				HR_Unit_y = 1;
 				HR_Unit_font = Gfx.FONT_XTINY;
 
 				Z_Label_x = 105;
@@ -306,21 +306,21 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 				HR_Zone_y = 1;
 				HR_Zone_font = Gfx.FONT_MEDIUM;
 
-				HR_Unit_x = 130;
-				HR_Unit_y = 75;
+				HR_Unit_x = 80;
+				HR_Unit_y = 1;
 				HR_Unit_font = Gfx.FONT_XTINY;
 
-				Z_Label_x = 130;
+				Z_Label_x = 135;
 				Z_Label_y = 40;
-				Z_Label_font = Gfx.FONT_NUMBER_MEDIUM;
+				Z_Label_font = Gfx.FONT_LARGE;
 
 				Z_Value_x = 280;
 				Z_Value_y = 1;
 				Z_Value_font = Gfx.FONT_NUMBER_MEDIUM;
 
 				Z_Range_x = 280;
-				Z_Range_y = 55;
-				Z_Range_font = Gfx.FONT_LARGE;
+				Z_Range_y = 50;
+				Z_Range_font = Gfx.FONT_MEDIUM;
 
 				break;
 
@@ -564,7 +564,7 @@ class DF_HR_TimeInZonesView extends Ui.DataField
     function GetHRZone(hr)
     {
 		var HR_Zone = 0;
-		for (var i = 0; i < Zones_Number ; ++i)
+		for (var i = 0; i <= Zones_Number ; ++i)
     	{
     		if ((Zone_L[i] <= hr) and (hr <= Zone_H[i]))
     	   	{
