@@ -5,6 +5,9 @@ With this Complex Data Field, you can check how much time you have spent in each
 You can customize this Data Field to use HR Training Zones stored in your Garmin device or specific hard coded Training Zones.
 
 Release History:
+
+- V1.17 - 2019-05-13
+* Fix bug
 - V1.14 - 2018-05-22
 * Update Display
 - V1.13 - 2018-05-22

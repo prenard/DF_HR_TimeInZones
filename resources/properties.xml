@@ -1,6 +1,5 @@
 <resources>
 	<properties>
-    	<property id="DF_Title" type="string">HR Time in Zones</property>
 	    <property id="Use_Garmin_Training_Zones" type="boolean">true</property>
 	    <property id="Z1_H" type="number">103</property>
 	    <property id="Z2_H" type="number">126</property>
@@ -12,7 +11,6 @@
 	</properties>
 
 	<strings>
-    	<string id="DF_Title_Title">Data Field Title</string>
     	<string id="Use_Garmin_Training_Zones_Title">Use Garmin Training Zones</string>
 	    <string id="Z1_H_Title">HR Zone 1 - High</string>
 	    <string id="Z2_H_Title">HR Zone 2 - High</string>
@@ -24,9 +22,6 @@
 	</strings>
 	
 	<settings>
-	    <setting propertyKey="@Properties.DF_Title" title="@Strings.DF_Title_Title">
-	        <settingConfig type="alphaNumeric" readonly="true" />
-	    </setting>
 	    <setting propertyKey="@Properties.Use_Garmin_Training_Zones" title="@Strings.Use_Garmin_Training_Zones_Title">
 	        <settingConfig type="boolean"/>
 	    </setting>

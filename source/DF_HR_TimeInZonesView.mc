@@ -6,8 +6,6 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 {
 	var Device_Type;
 
-	var App_Title;
-	
 	var Max_Zones_Number = 5;
 	var Max_HR = 999;
 	
@@ -105,10 +103,9 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 		Z_H[2] 			= Args[2];
 		Z_H[3] 			= Args[3];
 		Display_Timer 	= Args[4];
-        App_Title	 	= Args[5];
-		Use_Garmin_Training_Zones = Args[6];
-		Graph_Timer 	= Args[7];
-		Display_Graph	= Args[8];
+		Use_Garmin_Training_Zones = Args[5];
+		Graph_Timer 	= Args[6];
+		Display_Graph	= Args[7];
 
 		// Memory limitation on Edge 520 = no graph support
 		if (Device_Type.equals("edge_520"))
@@ -147,7 +144,8 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 					System.println("Zone " + j + " : " + Zone_L[j] + " - " + Zone_H[j]);
 				}
 				
-				if ((Z_H[i] == 0) and (!Last_Zone))
+				/*if ((Z_H[i] == 0) and (!Last_Zone))*/
+				if ((Z_H[i] == 0))
 				{
 					Zone_H[Zones_Number] = Max_HR;
 				}

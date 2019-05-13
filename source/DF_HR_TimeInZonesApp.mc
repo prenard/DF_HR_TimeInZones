@@ -43,25 +43,28 @@ class DF_HR_TimeInZonesApp extends App.AppBase
     //! Return the initial view of your application here
     function getInitialView()
     {
-		var Args = new [9];
+		var Args = new [8];
 
 		Args[0]	= readPropertyKeyInt("Z1_H",100);
 		Args[1]	= readPropertyKeyInt("Z2_H",120);
 		Args[2]	= readPropertyKeyInt("Z3_H",140);
 		Args[3] = readPropertyKeyInt("Z4_H",160);
 		Args[4] = readPropertyKeyInt("Display_Timer",2);
-		Args[5] = getProperty("DF_Title");
-		Args[6] = getProperty("Use_Garmin_Training_Zones");
-		Args[7] = readPropertyKeyInt("Graph_Timer",4);
-		Args[8] = getProperty("Display_Graph");
-		
+		//Args[5] = getProperty("Use_Garmin_Training_Zones");
+		Args[5] = Application.Properties.getValue("Use_Garmin_Training_Zones");
+		Args[6] = readPropertyKeyInt("Graph_Timer",4);
+		//Args[7] = getProperty("Display_Graph");
+		Args[7] = Application.Properties.getValue("Display_Graph");
+
         return [ new DF_HR_TimeInZonesView(Args) ];
 
     }
 
 	function readPropertyKeyInt(key,thisDefault)
 	{
-		var value = getProperty(key);
+		//var value = getProperty(key);
+		var value = Application.Properties.getValue(key);
+		
         if(value == null || !(value instanceof Number))
         {
         	if(value != null)
