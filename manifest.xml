@@ -2,10 +2,14 @@
     <iq:application entry="DF_HR_TimeInZonesApp" id="5822EE3C9E76458CB432F4264F412596" launcherIcon="@Drawables.LauncherIcon" minSdkVersion="2.1.1" name="@Strings.AppName" type="datafield">
         <iq:products>
             <iq:product id="edge1030"/>
+            <iq:product id="edge1030bontrager"/>
             <iq:product id="edge520plus"/>
+            <iq:product id="edge530"/>
             <iq:product id="edge820"/>
+            <iq:product id="edge830"/>
             <iq:product id="edge_1000"/>
             <iq:product id="edge_520"/>
+            <iq:product id="edgeexplore"/>
         </iq:products>
         <iq:permissions>
             <iq:uses-permission id="UserProfile"/>

@@ -6,6 +6,11 @@ You can customize this Data Field to use HR Training Zones stored in your Garmin
 
 Release History:
 
+- V1.18 - 2019-06-11
+* Add Edge 530 support
+* Add Edge 830 support
+* Add Edge 1030 Bontrager support
+* Add Edge Explore support
 - V1.17 - 2019-05-13
 * Fix bug
 - V1.14 - 2018-05-22

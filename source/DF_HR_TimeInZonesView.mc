@@ -1,10 +1,15 @@
+using Toybox.Application as App;
 using Toybox.WatchUi as Ui;
 using Toybox.Graphics as Gfx;
+
+
 //using Toybox.UserProfile as UserProfile;
 
 class DF_HR_TimeInZonesView extends Ui.DataField
 {
-	var Device_Type;
+	var app;
+
+	//var Device_Type;
 
 	var Max_Zones_Number = 5;
 	var Max_HR = 999;
@@ -93,8 +98,10 @@ class DF_HR_TimeInZonesView extends Ui.DataField
     {
         DataField.initialize();
 
-	    Device_Type = Ui.loadResource(Rez.Strings.Device);
-		System.println("Device_Type = " + Device_Type);
+        app = App.getApp();
+        
+	    //Device_Type = Ui.loadResource(Rez.Strings.Device);
+		//System.println("Device_Type = " + Device_Type);
 
 		var Z_H = new [Max_Zones_Number - 1];
 		
@@ -108,7 +115,7 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 		Display_Graph	= Args[7];
 
 		// Memory limitation on Edge 520 = no graph support
-		if (Device_Type.equals("edge_520"))
+		if (app.Device_Type.equals("edge_520"))
 		{
 			Display_Graph = false;
 		}
@@ -180,10 +187,9 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 
 		// Device Management
 
-		switch (Device_Type)
+
+		if (app.Device_Type.equals("edge_520") or app.Device_Type.equals("edge_520_plus") or app.Device_Type.equals("edge_820"))
 		{
-			case "edge_520":
-
 				Graph_Right_x = 195;
 				Graph_Bottom_y = 49;
 
@@ -215,11 +221,12 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 				Z_Range_y = 30;
 				Z_Range_font = Gfx.FONT_MEDIUM;
 
-				break;
+		}
+		else
+		if (app.Device_Type.equals("edge_530") or app.Device_Type.equals("edge_830"))
+		{
 
-			case "edge_520_plus":
-
-				Graph_Right_x = 195;
+				Graph_Right_x = 241;
 				Graph_Bottom_y = 49;
 
 				DF_Title_x = 1;
@@ -238,57 +245,22 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 				HR_Unit_y = 38;
 				HR_Unit_font = Gfx.FONT_XTINY;
 
-				Z_Label_x = 105;
+				Z_Label_x = 120;
 				Z_Label_y = 24;
 				Z_Label_font = Gfx.FONT_NUMBER_MILD;
 
-				Z_Value_x = 197;
+				Z_Value_x = 243;
 				Z_Value_y = 0;
 				Z_Value_font = Gfx.FONT_NUMBER_MILD;
 
-				Z_Range_x = 197;
+				Z_Range_x = 243;
 				Z_Range_y = 30;
 				Z_Range_font = Gfx.FONT_MEDIUM;
 
-				break;
-
-
-			case "edge_820":
-
-				Graph_Right_x = 195;
-				Graph_Bottom_y = 49;
-
-				DF_Title_x = 1;
-				DF_Title_y = 1;
-				DF_Title_font = Gfx.FONT_XTINY;
-
-				HR_Value_x = 80;
-				HR_Value_y = 10;
-				HR_Value_font = Gfx.FONT_NUMBER_HOT;
-
-				HR_Zone_x = 82;
-				HR_Zone_y = 1;
-				HR_Zone_font =  Gfx.FONT_MEDIUM;
-
-				HR_Unit_x = 85;
-				HR_Unit_y = 38;
-				HR_Unit_font = Gfx.FONT_XTINY;
-
-				Z_Label_x = 105;
-				Z_Label_y = 24;
-				Z_Label_font = Gfx.FONT_NUMBER_MILD;
-
-				Z_Value_x = 197;
-				Z_Value_y = 0;
-				Z_Value_font = Gfx.FONT_NUMBER_MILD;
-
-				Z_Range_x = 197;
-				Z_Range_y = 30;
-				Z_Range_font = Gfx.FONT_MEDIUM;
-
-				break;
-
-			case "edge_1000":
+		}
+		else
+		if (app.Device_Type.equals("edge_1000") or app.Device_Type.equals("edge_explore"))
+		{
 
 				Graph_Right_x = 230;
 				Graph_Bottom_y = 75;
@@ -321,9 +293,10 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 				Z_Range_y = 45;
 				Z_Range_font = Gfx.FONT_LARGE;
 
-				break;
-
-			case "edge_1030":
+		}
+		else
+		if (app.Device_Type.equals("edge_1030") or app.Device_Type.equals("edge_1030_bontrager"))
+		{
 
 				Graph_Right_x = 270;
 				Graph_Bottom_y = 90;
@@ -356,11 +329,6 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 				Z_Range_y = 50;
 				Z_Range_font = Gfx.FONT_MEDIUM;
 
-				break;
-
-
-			default:
-				break;
 		}
 
 		arrayHRSize = Graph_Right_x - 5;
