@@ -1,0 +1,42 @@
+import Toybox.Lang;
+using Toybox.WatchUi;
+using Toybox.WatchUi as Ui;
+using Toybox.Graphics;
+using Toybox.Graphics as Gfx;
+
+module Rez {
+    module Drawables {
+        (:initialized) var LauncherIcon as Symbol;
+    } // Drawables
+
+    module Fonts {
+    } // Fonts
+
+    module JsonData {
+    } // JsonData
+
+    module Layouts {
+        function MainLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+            var rez_cmp_local_custom_drawable_16324162409987814257 = new Background();
+
+            return [rez_cmp_local_custom_drawable_16324162409987814257] as Array<WatchUi.Drawable>;
+        }
+    } // Layouts
+
+    module Menus {
+    } // Menus
+
+    module Strings {
+        (:initialized) var Z1_H_Title as Symbol;
+        (:initialized) var Display_Timer_Title as Symbol;
+        (:initialized) var Graph_Timer_Title as Symbol;
+        (:initialized) var Device as Symbol;
+        (:initialized) var Z2_H_Title as Symbol;
+        (:initialized) var Z3_H_Title as Symbol;
+        (:initialized) var Z4_H_Title as Symbol;
+        (:initialized) var Use_Garmin_Training_Zones_Title as Symbol;
+        (:initialized) var App_Version_Title as Symbol;
+        (:initialized) var Display_Graph_Title as Symbol;
+        (:initialized) var AppName as Symbol;
+    } // Strings
+} // Rez

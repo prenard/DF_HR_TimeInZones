@@ -187,8 +187,8 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 
 		// Device Management
 
-
-		if (app.Device_Type.equals("edge_520") or app.Device_Type.equals("edge_520_plus") or app.Device_Type.equals("edge_820"))
+		if (app.deviceFamily.equals("rectangle-200x265"))
+		//if (app.Device_Type.equals("edge_520") or app.Device_Type.equals("edge_520_plus") or app.Device_Type.equals("edge_820"))
 		{
 				Graph_Right_x = 195;
 				Graph_Bottom_y = 49;
@@ -223,7 +223,8 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 
 		}
 		else
-		if (app.Device_Type.equals("edge_530") or app.Device_Type.equals("edge_830"))
+		if (app.deviceFamily.equals("rectangle-246x322"))
+		//if (app.Device_Type.equals("edge_530") or app.Device_Type.equals("edge_830"))
 		{
 
 				Graph_Right_x = 241;
@@ -259,7 +260,8 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 
 		}
 		else
-		if (app.Device_Type.equals("edge_1000") or app.Device_Type.equals("edge_explore"))
+		if (app.deviceFamily.equals("rectangle-240x400"))
+		//if (app.Device_Type.equals("edge_1000") or app.Device_Type.equals("edge_explore"))
 		{
 
 				Graph_Right_x = 230;
@@ -295,7 +297,8 @@ class DF_HR_TimeInZonesView extends Ui.DataField
 
 		}
 		else
-		if (app.Device_Type.equals("edge_1030") or app.Device_Type.equals("edge_1030_bontrager"))
+		if (app.deviceFamily.equals("rectangle-282x470"))
+		//if (app.Device_Type.equals("edge_1030") or app.Device_Type.equals("edge_1030_bontrager"))
 		{
 
 				Graph_Right_x = 270;

@@ -1,0 +1,98 @@
+[ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 1; ]
+import Toybox.Lang;
+[ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 2; ]
+using Toybox.WatchUi;
+[ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 3; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 4; ]
+using Toybox.Graphics;
+[ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 5; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 7; ]
+module Rez {
+    [ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 8; ]
+    module Drawables {
+        [ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 8; ]
+        <init> {
+        }
+        [ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 9; @position = 27; initialized = true; ]
+        var LauncherIcon as Symbol;
+    }
+    [ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 12; ]
+    module Fonts {
+        [ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 12; ]
+        <init> {
+        }
+    }
+    [ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 15; ]
+    module JsonData {
+        [ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 15; ]
+        <init> {
+        }
+    }
+    [ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 18; ]
+    module Layouts {
+        [ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 18; ]
+        <init> {
+        }
+        [ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 19; ]
+        function MainLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+C_Users_admin_OneDrive___kyndryl_Patrick_Renard_Private_Box_VisualStudioCode_data_Garmin_CIQ_DF_HR_TimeInZones_bin_gen_006_B2713_00_source_Rez_mcgen_19_74_start:
+[ "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen" 20 12 ]
+            [ "C_Users_admin_OneDrive___kyndryl_Patrick_Renard_Private_Box_VisualStudioCode_data_Garmin_CIQ_DF_HR_TimeInZones_bin_gen_006_B2713_00_source_Rez_mcgen_19_74_start" "C_Users_admin_OneDrive___kyndryl_Patrick_Renard_Private_Box_VisualStudioCode_data_Garmin_CIQ_DF_HR_TimeInZones_bin_gen_006_B2713_00_source_Rez_mcgen_19_74_stop" ]
+            %rez_cmp_local_custom_drawable_43839192671270505811.1 = local;
+            %tmp.4 = getv ? :Background;
+            %tmp.1 = newc %tmp.4 ();
+            lputv %rez_cmp_local_custom_drawable_43839192671270505811.1 %tmp.1;
+[ "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen" 22 12 ]
+            %tmp.5 = newa Array<WatchUi.Drawable> 1;
+            %tmp.7 = lgetv %rez_cmp_local_custom_drawable_43839192671270505811.1;
+            %tmp.8 = dup %tmp.5;
+            %tmp.9 = aputv %tmp.8 0 %tmp.7;
+            ret %tmp.9;
+C_Users_admin_OneDrive___kyndryl_Patrick_Renard_Private_Box_VisualStudioCode_data_Garmin_CIQ_DF_HR_TimeInZones_bin_gen_006_B2713_00_source_Rez_mcgen_19_74_stop:
+        }
+    }
+    [ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 26; ]
+    module Menus {
+        [ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 26; ]
+        <init> {
+        }
+    }
+    [ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 29; ]
+    module Strings {
+        [ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 29; ]
+        <init> {
+        }
+        [ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 30; @position = 27; initialized = true; ]
+        var Z1_H_Title as Symbol;
+        [ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 31; @position = 27; initialized = true; ]
+        var Display_Timer_Title as Symbol;
+        [ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 32; @position = 27; initialized = true; ]
+        var Graph_Timer_Title as Symbol;
+        [ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 33; @position = 27; initialized = true; ]
+        var Device as Symbol;
+        [ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 34; @position = 27; initialized = true; ]
+        var Z2_H_Title as Symbol;
+        [ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 35; @position = 27; initialized = true; ]
+        var Z3_H_Title as Symbol;
+        [ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 36; @position = 27; initialized = true; ]
+        var Z4_H_Title as Symbol;
+        [ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 37; @position = 27; initialized = true; ]
+        var deviceFamily as Symbol;
+        [ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 38; @position = 27; initialized = true; ]
+        var Use_Garmin_Training_Zones_Title as Symbol;
+        [ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 39; @position = 27; initialized = true; ]
+        var App_Version_Title as Symbol;
+        [ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 40; @position = 27; initialized = true; ]
+        var Display_Graph_Title as Symbol;
+        [ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 41; @position = 27; initialized = true; ]
+        var AppName as Symbol;
+    }
+}
+[ @file = "C:\Users\admin\OneDrive - kyndryl\Patrick_Renard_Private_Box\VisualStudioCode\data\Garmin-CIQ\DF_HR_TimeInZones\bin\gen\006-B2713-00\source\Rez.mcgen"; @line = 1; ]
+<init> {
+}

@@ -6,6 +6,10 @@ You can customize this Data Field to use HR Training Zones stored in your Garmin
 
 Release History:
 
+- V1.18-01 - 2023-04-251
+* Add Edge 540 & 840 support
+* Implement CIQ SDK 4.24
+* Add Application Version support
 - V1.18 - 2019-06-11
 * Add Edge 530 support
 * Add Edge 830 support
